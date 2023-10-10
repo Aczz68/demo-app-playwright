@@ -73,6 +73,8 @@ export default defineConfig({
     command: "npm run dev",
     url: "http://localhost:5173/",
     // reuseExistingServer: !process.env.CI,
+    // (false),会抱怨服务器已在运行(这是playwright内建一种防御机制,确保不会将其他测试运行到意想不到的服务器)
+    // (true)告知playwright是安全的
     reuseExistingServer: true,
   },
 });
